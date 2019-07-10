@@ -1,19 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    
+   <Search :title="titulo" v-on:search-movie-title="searchMovie"/>
+    
+   <Content v-bind:movie-title="movieTitleToSearch"/>
+
+    <!-- <div class="row">
+
+      <div class="col-4">
+        <Lista/>
+      </div>
+      <div class="col-8">
+         <Crud/> 
+      </div>     
+   
+    </div>        -->
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //import HelloWorld from './components/HelloWorld.vue'
+  import Search from './components/Search.vue'
+  import Content from './components/Content.vue'
+  //import Lista from './components/Lista.vue'
+  //import Crud from './components/Crud.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    components: {
+      //HelloWorld,
+      Search,
+      Content
+      //Lista,
+      //Crud
+    },
+    data() {
+      return {
+        titulo: 'Movie app Search',
+        movieTitleToSearch: ''
+      }
+    },
+    methods: {
+      searchMovie: function (title) {
+        // alert(title)
+        this.movieTitleToSearch = title
+      }
+    }
   }
-}
 </script>
 
 <style>
@@ -23,6 +58,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
+
 </style>
