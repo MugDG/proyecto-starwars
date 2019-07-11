@@ -38,7 +38,7 @@
     },
     data() {
       return {
-        titulo: 'Movie app Search',
+        titulo: 'Star Wars Academy',
         movieTitleToSearch: ''
       }
     },

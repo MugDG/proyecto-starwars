@@ -24,15 +24,12 @@
       <br><br>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="container">
         
         <div class="col-8" align="left">
           <form action="" class="text-left">
-            <!-- <div class="form-group">
-              <label >ID</label>
-              <input v-model="id" type="text" class="form-control" id="id" placeholder="ID">
-            </div> -->
+           
             <div class="form-group">
               <label >Título</label>
               <input v-model="Title" type="text" class="form-control" id="Title" placeholder="Título">
@@ -54,7 +51,7 @@
           
         </div>  
       </div>     
-    </div>
+    </div> -->
     <br/><br/>
   
   </div>
